@@ -4,585 +4,581 @@
 -->
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Project</title>
     <link href="style.css" rel="stylesheet" />
 </head>
+
 <body>
-<h1>Online Merch Store</h1>
-<span id="dateArea" style="float: right;">Date/Time</span>
-<br />
-<span style="float: right;">
-      Currency:
-      <img
-              class="currencyFlag"
-              width="20px"
-              src="data:image/png;base64,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"
-      />
-      <select id="currencySelector" onchange="convertPrice();">
-        <option selected value="CAD">CAD</option>
-        <option value="USD">USD</option>
-      </select>
+    <h1>Online Merch Store</h1>
+    <span id="dateArea" style="float: right;">Date/Time</span>
+    <br />
+    <span style="float: right;">
+        Currency:
+        <img class="currencyFlag" width="20px"
+            src="data:image/png;base64,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" />
+        <select id="currencySelector" onchange="convertPrice();">
+            <option selected value="CAD">CAD</option>
+            <option value="USD">USD</option>
+        </select>
     </span>
-<br />
-<fieldset>
-    <legend>Store Items</legend>
-    <select id="displayFilter" onchange="displayStoreItems()">
-        <option>All</option>
-        <option>Harry Potter</option>
-        <option>Pokemon</option>
-        <option>Marvel</option>
-        <option>Disney</option>
-    </select>
     <br />
-    <table id="inventoryOutput"></table>
-</fieldset>
-<br />
-<fieldset>
-    <legend>Your Cart</legend>
-    <table id="cartOutput"></table>
+    <fieldset>
+        <legend>Store Items</legend>
+        <select id="displayFilter" onchange="displayStoreItems()">
+            <option>All</option>
+            <option>Harry Potter</option>
+            <option>Pokemon</option>
+            <option>Marvel</option>
+            <option>Disney</option>
+        </select>
+        <br />
+        <table id="inventoryOutput"></table>
+    </fieldset>
     <br />
-    <div id="cartCheckout"></div>
-</fieldset>
-<br />
-<fieldset>
-    <legend>Review an Item</legend>
-    <p>
-        Product ID: <input type="text" id="reviewId" />&nbsp;<span
-            id="reviewIdMsg"
-    ></span>
-    </p>
-    <p>Review: <input type="text" id="reviewDesc" size="100" /></p>
-    <p>
-        Rating: <input type="number" id="reviewNum" />&nbsp;<span
-            id="addRatingValidationMessage"
-    ></span>
-    </p>
-    <p><input type="button" onclick="addReview();" value="Review" /></p>
-</fieldset>
+    <fieldset>
+        <legend>Your Cart</legend>
+        <table id="cartOutput"></table>
+        <br />
+        <div id="cartCheckout"></div>
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Review an Item</legend>
+        <p>
+            Product ID: <input type="text" id="reviewId" />&nbsp;<span id="reviewIdMsg"></span>
+        </p>
+        <p>Review: <input type="text" id="reviewDesc" size="100" /></p>
+        <p>
+            Rating: <input type="number" id="reviewNum" />&nbsp;<span id="addRatingValidationMessage"></span>
+        </p>
+        <p><input type="button" onclick="addReview();" value="Review" /></p>
+    </fieldset>
 
-<!-- Javascript -->
-<script>
-    // constructors
+    <!-- Javascript -->
+    <script>
+        // constructors
 
-    // storeItem() constructor, used for structuring the item data in the store
-    function storeItem(
-        id,
-        name,
-        price,
-        stockQty,
-        maxPerCust,
-        category,
-        shippingFee,
-        reviews,
-        description,
-        img
-    ) {
-        this.id = id; // id for product
-        this.name = name; // name of the product
-        this.price = price; // product price shown, default in CAD but may be converted
-        this.stockQty = stockQty; // total amount of item available
-        this.maxPerCust = maxPerCust; // max qty allowed in cart
-        this.category = category; // category of item
-        this.shippingFee = shippingFee; //cost of shipping
-        this.reviews = reviews; // array containing review objects
-        this.description = description; // description of the product
-        this.img = img; // link to the image file
-    }
-
-    // cartItem() constructor, used for storing relevant item data specifically for items in the Cart
-    function cartItem(id, price, qty, shippingFee) {
-        this.id = id; // id of product
-        this.price = price; // product price default in CAD but may be converted
-        this.qty = qty; // qty of item in cart
-        this.shippingFee = shippingFee; // cost of shipping product
-    }
-
-    // reviewItem() constructor, used for storing a review and rating
-    function reviewItem(review, rating) {
-        this.review = review; // product review
-        this.rating = rating; // product rating
-    }
-
-    // create empty arrays for the store and cart items
-    var storeItems = [];
-    var cartItems = [];
-
-    // initialize() function, called when the page loads
-    function initialize() {
-        // display current date/time to screen
-        document.getElementById("dateArea").innerHTML = new Date();
-
-        // populate store array with atleast 15 items
-        storeItems.push(
-            new storeItem(
-                1,
-                "Expecto Patronum Spell Sweatshirt",
-                39.9,
-                3,
-                5,
-                "Harry Potter",
-                3,
-                [],
-                "Harry Potter themed sweatshirt",
-                "https://cdn.media.amplience.net/s/hottopic/18780644_hi?$productMainDesktop$"
-            ),
-            new storeItem(
-                2,
-                "Deathly Hallows Floral Throw Blanket",
-                28.9,
-                1,
-                6,
-                "Harry Potter",
-                3,
-                [],
-                "Harry Potter themed throw blanket",
-                "https://cdn.media.amplience.net/s/hottopic/18333436_hi?$productTileDesktop$"
-            ),
-            new storeItem(
-                3,
-                "Crystal Key Necklace Set",
-                12.9,
-                10,
-                4,
-                "Harry Potter",
-                2,
-                [],
-                "Harry potter themed crystal key necklace set",
-                "https://cdn.media.amplience.net/i/hottopic/16816765_av1?$productTileDesktop$"
-            ),
-            new storeItem(
-                4,
-                "Cauldron Cookie Jar",
-                12.05,
-                15,
-                5,
-                "Harry Potter",
-                5,
-                [],
-                "Harry Potter themed cookie jar",
-                "https://cdn.media.amplience.net/i/hottopic/18540771_av1?$productTileDesktop$"
-            ),
-            new storeItem(
-                5,
-                "Free Dobby Sock T-Shirt",
-                20.0,
-                20,
-                5,
-                "Harry Potter",
-                5,
-                [],
-                "Harry Potter free dobby t-shirt",
-                "https://cdn.media.amplience.net/s/hottopic/13096109_hi?$productTileDesktop$"
-            ),
-            new storeItem(
-                6,
-                "Poke Ball Ornament",
-                11.0,
-                100,
-                20,
-                "Pokemon",
-                2,
-                [],
-                "Pokemon themed Christmas ornament",
-                "https://cdn.media.amplience.net/i/hottopic/18521562_av1?$productTileDesktop$"
-            ),
-            new storeItem(
-                7,
-                "Eeveelutions Sweatshirt",
-                30.0,
-                50,
-                5,
-                "Pokemon",
-                4,
-                [],
-                "Pokemon themed sweatshirt",
-                "https://cdn.media.amplience.net/s/hottopic/20112424_hi?$productTileDesktop$"
-            ),
-            new storeItem(
-                8,
-                "Pikachu Plush",
-                15.0,
-                88,
-                2,
-                "Pokemon",
-                5,
-                [],
-                "Pokemon plush of Pikachu",
-                "https://cdn.media.amplience.net/i/hottopic/17995018_av1?$productTileDesktop$"
-            ),
-            new storeItem(
-                9,
-                "Eevee beanie",
-                10.0,
-                97,
-                2,
-                "Pokemon",
-                4,
-                [],
-                "Pokemon themed beanie with tassel",
-                "https://cdn.media.amplience.net/s/hottopic/18581319_hi?$productThumbDesktop$"
-            ),
-            new storeItem(
-                10,
-                "My Pokemon Cookbook",
-                30.99,
-                30,
-                2,
-                "Pokemon",
-                5,
-                [],
-                "Delicious Recipes Inspired By Pikachu And Friends",
-                "https://cdn.media.amplience.net/s/hottopic/19296741_hi?$productThumbDesktop$"
-            ),
-            new storeItem(
-                11,
-                "Spiderman Ornament",
-                11.99,
-                100,
-                20,
-                "Marvel",
-                2,
-                [],
-                "Hallmark Marvel Spider-Man Upside Down Ornament",
-                "https://cdn.media.amplience.net/s/hottopic/18521457_hi?$productThumbDesktop$"
-            ),
-            new storeItem(
-                12,
-                "Deadpool Travel Mug",
-                20.99,
-                43,
-                5,
-                "Marvel",
-                5,
-                [],
-                "Marvel Deadpool No One Cares Travel Mug",
-                "https://cdn.media.amplience.net/s/hottopic/19752207_hi?$productTileDesktop$"
-            ),
-            new storeItem(
-                13,
-                "Jingle Groot T-Shirt",
-                20.99,
-                100,
-                2,
-                "Marvel",
-                5,
-                [],
-                "Marvel Guardians Of The Galaxy Jingle Groot T-Shirt",
-                "https://cdn.media.amplience.net/s/hottopic/13119893_hi?$productTileDesktop$"
-            ),
-            new storeItem(
-                14,
-                "The Nightmare Before Christmas Cardigan",
-                38.99,
-                83,
-                3,
-                "Disney",
-                8,
-                [],
-                "The Nightmare Before Christmas Fair Isle Girls Sherpa Cardigan",
-                "https://cdn.media.amplience.net/i/hottopic/19235985_av1?$productTileDesktop$"
-            ),
-            new storeItem(
-                15,
-                "Mickey Mouse & Minnie Mouse Christmas Baking Set",
-                25.99,
-                37,
-                3,
-                "Disney",
-                5,
-                [],
-                "Mickey & Minnie Mouse Christmas Baking Set",
-                "https://cdn.media.amplience.net/s/hottopic/18532245_hi?$productTileDesktop$"
-            )
-        );
-        // call displayStoreItems() to populate store items
-        displayStoreItems();
-        // call displayCartItems() to populate cart items
-        displayCartItems();
-    }
-
-    initialize();
-
-    // displayStoreItems() function, displays all the store items when page loads or user changes category
-    function displayStoreItems() {
-        // display table headings
-        document.getElementById("inventoryOutput").innerHTML =
-            "<tr><th>ID</th><th>Product Name</th><th>Price</th><th>Qty</th><th>Max</th><th>Category</th><th>Image</th><th>Details</th><th>Add To Cart</th></tr>";
-        // display properties of each item in a grid
-        for (let i = 0; i < storeItems.length; i++) {
-            var item = storeItems[i];
-            // check if item is in selected category and only display if it is
-            var selectedCategory = document.getElementById('displayFilter').value;
-            if (selectedCategory === "All" || selectedCategory === item.category) {
-                document.getElementById("inventoryOutput").innerHTML +=
-                    "<tr><td>" +
-                    item.id +
-                    "</td><td>" +
-                    item.name +
-                    "</td><td>" +
-                    item.price +
-                    "</td><td>" +
-                    item.stockQty +
-                    "</td><td>" +
-                    item.maxPerCust +
-                    "</td><td>" +
-                    item.category +
-                    "</td><td><img width='100px' src='" +
-                    item.img +
-                    "'/></td>" +
-                    "<td><button onclick='itemDetails(" +
-                    item.id +
-                    ");'>See Details</button></td>" +
-                    "<td><button onclick='addCartItem(" +
-                    item.id +
-                    "," +
-                    item.price +
-                    "," +
-                    1 +
-                    "," +
-                    item.shippingFee +
-                    "," +
-                    item.maxPerCust +
-                    ");'>+1</button></td></tr>";
-            }
-        }
-    }
-
-    // displayCartItems() function, displays current cart items when page loads or item is added to cart
-    function displayCartItems() {
-        // if no items, output "No items in cart"
-        if (cartItems.length < 1) {
-            document.getElementById("cartOutput").innerHTML =
-                "No items in cart... time to start shopping!";
-        } else {
-            // create table heading
-            document.getElementById("cartOutput").innerHTML =
-                "<tr><th>ID</th><th>Price</th><th>Qty</th><th>Subtotal</th><th>Remove Item</th></tr>";
-            // display properties of each item in a grid
-            for (let i = 0; i < cartItems.length; i++) {
-                var item = cartItems[i];
-                document.getElementById("cartOutput").innerHTML +=
-                    "<tr><td>" +
-                    item.id +
-                    "</td><td>" +
-                    item.price +
-                    "</td><td>" +
-                    item.qty +
-                    "</td><td>" +
-                    (item.price * item.qty).toFixed(2) +
-                    "</td><td><button onclick='removeCartItem(" +
-                    item.id +
-                    ");'>-1</button></tr>";
-            }
-        }
-    }
-
-    // cartTotals() function, calculates and displays the total for the order in the cart
-    function cartTotals() {
-        // define variables for calculation
-        var itemsTotal = 0;
-        var shippingTotal = 0;
-
-        // cycle through cart and add prices to total
-        for (let i = 0; i < cartItems.length; i++) {
-            itemsTotal += cartItems[i].price * cartItems[i].qty;
-            shippingTotal += cartItems[i].shippingFee * cartItems[i].qty;
+        // storeItem() constructor, used for structuring the item data in the store
+        function storeItem(
+            id,
+            name,
+            price,
+            stockQty,
+            maxPerCust,
+            category,
+            shippingFee,
+            reviews,
+            description,
+            img
+        ) {
+            this.id = id; // id for product
+            this.name = name; // name of the product
+            this.price = price; // product price shown, default in CAD but may be converted
+            this.stockQty = stockQty; // total amount of item available
+            this.maxPerCust = maxPerCust; // max qty allowed in cart
+            this.category = category; // category of item
+            this.shippingFee = shippingFee; //cost of shipping
+            this.reviews = reviews; // array containing review objects
+            this.description = description; // description of the product
+            this.img = img; // link to the image file
         }
 
-        // calculate totals
-        var subtotal = itemsTotal + shippingTotal;
-        var tax = subtotal * 0.13;
-        var orderTotal = subtotal + tax;
-
-        // output pricing
-        document.getElementById("cartCheckout").innerHTML =
-            "Items Subtotal: $" +
-            itemsTotal.toFixed(2) +
-            "<br>Estimated Shipping: $" +
-            shippingTotal.toFixed(2) +
-            "<br><br>Subtotal: $" +
-            subtotal.toFixed(2) +
-            "<br>Estimated Tax (13%): $" +
-            tax.toFixed(2) +
-            "<br>Order Total: $" +
-            orderTotal.toFixed(2);
-    }
-
-    // covertPrice() function, converts the page's currency to either CAD or USD
-    function convertPrice() {
-        // get new currency value
-        var newCurr = document.getElementById("currencySelector").value;
-        // set the exchangeRate to use for currency conversion
-        var exchangeRate = 0.741;
-        // cycle through all store items and change the price
-        if (newCurr === "USD") {
-            for (let i = 0; i < storeItems.length; i++) {
-                // store price in CAD if they decide to switch back
-                storeItems[i].priceCAD = storeItems[i].price;
-                storeItems[i].shippingFeeCAD = storeItems[i].shippingFee;
-                // exchange price to USD and set to product pricing
-                var priceExchanged = storeItems[i].price * exchangeRate;
-                var shippingExchanged = storeItems[i].shippingFee * exchangeRate;
-                storeItems[i].price = priceExchanged.toFixed(2);
-                storeItems[i].shippingFee = shippingExchanged.toFixed(2);
-            }
-        } else {
-            for (let i = 0; i < storeItems.length; i++) {
-                // use previously stored CAD price to switch back to CAD
-                storeItems[i].price = storeItems[i].priceCAD;
-                storeItems[i].shippingFee = storeItems[i].shippingFeeCAD;
-            }
+        // cartItem() constructor, used for storing relevant item data specifically for items in the Cart
+        function cartItem(id, price, qty, shippingFee) {
+            this.id = id; // id of product
+            this.price = price; // product price default in CAD but may be converted
+            this.qty = qty; // qty of item in cart
+            this.shippingFee = shippingFee; // cost of shipping product
         }
 
-        // refresh all prices
-        displayStoreItems();
-        displayCartItems();
-        cartTotals();
-    }
+        // reviewItem() constructor, used for storing a review and rating
+        function reviewItem(review, rating) {
+            this.review = review; // product review
+            this.rating = rating; // product rating
+        }
 
-    // addCartItem(id,price,qty,shippingFee); function, creates a new cart object and adds it to the cart
-    function addCartItem(id, price, qty, shippingFee, maxPerCust) {
-        // create new cart object
-        newItem = new cartItem(id, price, qty, shippingFee);
-        // declare new boolean to determine if already in cart
-        var inCart = false;
-        // cycle through cart items
-        for (let i = 0; i < cartItems.length; i++) {
-            // if item is in cart change inCart to true
-            if (cartItems[i].id === newItem.id) {
-                inCart = true;
-                // check if item is in stock and customer hasn't reached max amt.
-                if (
-                    cartItems[i].qty < maxPerCust &&
-                    storeItems[id - 1].stockQty > 0
-                ) {
-                    storeItems[id - 1].stockQty--;
-                    cartItems[i].qty++;
-                } else {
-                    alert(
-                        "This item is either out of stock or you have reached the maximum qty. Please choose another item."
-                    );
-                }
-            }
-        }
-        // if item isn't in cart already add it in
-        if (!inCart) {
-            cartItems.push(newItem);
-            storeItems[id - 1].stockQty--;
-        }
-        // refresh cart output to display new item and totals
-        displayStoreItems();
-        displayCartItems();
-        cartTotals();
-    }
+        // create empty arrays for the store and cart items
+        var storeItems = [];
+        var cartItems = [];
 
-    // removeCartItem(id), removes item from cart
-    function removeCartItem(id) {
-        // cycle through cart items to find correct item using id
-        for (let i = 0; i < cartItems.length; i++) {
-            if (cartItems[i].id === id) {
-                // remove from item's cart qty
-                cartItems[i].qty--;
-                if (cartItems[i].qty < 1) {
-                    // remove item from cart if qty is 0
-                    cartItems.splice(i, 1);
-                }
-            }
-        }
-        // cycle through store items to find correct item using id
-        for (let i = 0; i < storeItems.length; i++) {
-            if (storeItems[i].id === id) {
-                // add back to item's stock qty
-                storeItems[i].stockQty++;
-            }
-        }
-        // refresh item displays and totals
-        displayStoreItems();
-        displayCartItems();
-        cartTotals();
-    }
+        // initialize() function, called when the page loads
+        function initialize() {
+            // display current date/time to screen
+            document.getElementById("dateArea").innerHTML = new Date();
 
-    // itemDetails(id), displays item details when button is clicked
-    function itemDetails(id) {
-        // cycle through storeItems to select correct item to display
-        for (let i = 0; i < storeItems.length; i++) {
-            if (id === storeItems[i].id) {
-                // create alertMessage variable to allow for reviews to be added on
-                var item = storeItems[i];
-                var alertMessage =
-                    "Item Details\n---------------\nId: " +
-                    item.id +
-                    "\nName: " +
-                    item.name +
-                    "\nDescription: " +
-                    item.description +
-                    "\nPrice: $" +
-                    item.price +
-                    "\nQuantity On Hand: " +
-                    item.stockQty +
-                    "\nMax Per Customer: " +
-                    item.maxPerCust +
-                    "\nCategory: " +
-                    item.category +
-                    "\nShipping Cost: $" +
-                    item.shippingFee +
-                    "\n\nReviews:\n";
-                // create total rating num var to use for average review
-                var totalRatings = 0;
-                // add reviews to alert message
-                for (let i = 0; i < item.reviews.length; i++) {
-                    alertMessage +=
-                        "\nReview " +
-                        (i + 1) +
-                        ": " +
-                        item.reviews[i].review +
-                        "\nRating: " +
-                        item.reviews[i].rating +
-                        "\n\n";
-                    totalRatings += parseInt(item.reviews[i].rating);
-                }
-                // add average rating to alert message if reviews exist
-                if (item.reviews.length > 0) {
-                    console.log(totalRatings);
-                    var averageRating = totalRatings / item.reviews.length;
-                    alertMessage += "Average Rating: " + averageRating;
-                }
-                // display details
-                alert(alertMessage);
-            }
-        }
-    }
-
-    // addReview(), pushes a review into the review array of the specified product
-    function addReview() {
-        // get input values and store into variables
-        var itemId = document.getElementById("reviewId").value;
-        var review = document.getElementById("reviewDesc").value;
-        var rating = document.getElementById("reviewNum").value;
-        var newReview = new reviewItem(review, rating);
-        // create variable for id validation
-        var itemExists = false;
-        // cycle through store items to find correct item
-        for (let i = 0; i < storeItems.length; i++) {
-            if (itemId == storeItems[i].id) {
-                // add review to reviews array
-                storeItems[i].reviews.push(newReview);
-                // verify that id exists
-                itemExists = true;
-            }
-        }
-        // validate correct entry into product ID
-        if (itemExists === false) {
-            alert(
-                "Invalid id entry, please see id column in product display to select correct item"
+            // populate store array with atleast 15 items
+            storeItems.push(
+                new storeItem(
+                    1,
+                    "Expecto Patronum Spell Sweatshirt",
+                    39.9,
+                    3,
+                    5,
+                    "Harry Potter",
+                    3,
+                    [],
+                    "Harry Potter themed sweatshirt",
+                    "https://cdn.media.amplience.net/s/hottopic/18780644_hi?$productMainDesktop$"
+                ),
+                new storeItem(
+                    2,
+                    "Deathly Hallows Floral Throw Blanket",
+                    28.9,
+                    1,
+                    6,
+                    "Harry Potter",
+                    3,
+                    [],
+                    "Harry Potter themed throw blanket",
+                    "https://cdn.media.amplience.net/s/hottopic/18333436_hi?$productTileDesktop$"
+                ),
+                new storeItem(
+                    3,
+                    "Crystal Key Necklace Set",
+                    12.9,
+                    10,
+                    4,
+                    "Harry Potter",
+                    2,
+                    [],
+                    "Harry potter themed crystal key necklace set",
+                    "https://cdn.media.amplience.net/i/hottopic/16816765_av1?$productTileDesktop$"
+                ),
+                new storeItem(
+                    4,
+                    "Cauldron Cookie Jar",
+                    12.05,
+                    15,
+                    5,
+                    "Harry Potter",
+                    5,
+                    [],
+                    "Harry Potter themed cookie jar",
+                    "https://cdn.media.amplience.net/i/hottopic/18540771_av1?$productTileDesktop$"
+                ),
+                new storeItem(
+                    5,
+                    "Free Dobby Sock T-Shirt",
+                    20.0,
+                    20,
+                    5,
+                    "Harry Potter",
+                    5,
+                    [],
+                    "Harry Potter free dobby t-shirt",
+                    "https://cdn.media.amplience.net/s/hottopic/13096109_hi?$productTileDesktop$"
+                ),
+                new storeItem(
+                    6,
+                    "Poke Ball Ornament",
+                    11.0,
+                    100,
+                    20,
+                    "Pokemon",
+                    2,
+                    [],
+                    "Pokemon themed Christmas ornament",
+                    "https://cdn.media.amplience.net/i/hottopic/18521562_av1?$productTileDesktop$"
+                ),
+                new storeItem(
+                    7,
+                    "Eeveelutions Sweatshirt",
+                    30.0,
+                    50,
+                    5,
+                    "Pokemon",
+                    4,
+                    [],
+                    "Pokemon themed sweatshirt",
+                    "https://cdn.media.amplience.net/s/hottopic/20112424_hi?$productTileDesktop$"
+                ),
+                new storeItem(
+                    8,
+                    "Pikachu Plush",
+                    15.0,
+                    88,
+                    2,
+                    "Pokemon",
+                    5,
+                    [],
+                    "Pokemon plush of Pikachu",
+                    "https://cdn.media.amplience.net/i/hottopic/17995018_av1?$productTileDesktop$"
+                ),
+                new storeItem(
+                    9,
+                    "Eevee beanie",
+                    10.0,
+                    97,
+                    2,
+                    "Pokemon",
+                    4,
+                    [],
+                    "Pokemon themed beanie with tassel",
+                    "https://cdn.media.amplience.net/s/hottopic/18581319_hi?$productThumbDesktop$"
+                ),
+                new storeItem(
+                    10,
+                    "My Pokemon Cookbook",
+                    30.99,
+                    30,
+                    2,
+                    "Pokemon",
+                    5,
+                    [],
+                    "Delicious Recipes Inspired By Pikachu And Friends",
+                    "https://cdn.media.amplience.net/s/hottopic/19296741_hi?$productThumbDesktop$"
+                ),
+                new storeItem(
+                    11,
+                    "Spiderman Ornament",
+                    11.99,
+                    100,
+                    20,
+                    "Marvel",
+                    2,
+                    [],
+                    "Hallmark Marvel Spider-Man Upside Down Ornament",
+                    "https://cdn.media.amplience.net/s/hottopic/18521457_hi?$productThumbDesktop$"
+                ),
+                new storeItem(
+                    12,
+                    "Deadpool Travel Mug",
+                    20.99,
+                    43,
+                    5,
+                    "Marvel",
+                    5,
+                    [],
+                    "Marvel Deadpool No One Cares Travel Mug",
+                    "https://cdn.media.amplience.net/s/hottopic/19752207_hi?$productTileDesktop$"
+                ),
+                new storeItem(
+                    13,
+                    "Jingle Groot T-Shirt",
+                    20.99,
+                    100,
+                    2,
+                    "Marvel",
+                    5,
+                    [],
+                    "Marvel Guardians Of The Galaxy Jingle Groot T-Shirt",
+                    "https://cdn.media.amplience.net/s/hottopic/13119893_hi?$productTileDesktop$"
+                ),
+                new storeItem(
+                    14,
+                    "The Nightmare Before Christmas Cardigan",
+                    38.99,
+                    83,
+                    3,
+                    "Disney",
+                    8,
+                    [],
+                    "The Nightmare Before Christmas Fair Isle Girls Sherpa Cardigan",
+                    "https://cdn.media.amplience.net/i/hottopic/19235985_av1?$productTileDesktop$"
+                ),
+                new storeItem(
+                    15,
+                    "Mickey Mouse & Minnie Mouse Christmas Baking Set",
+                    25.99,
+                    37,
+                    3,
+                    "Disney",
+                    5,
+                    [],
+                    "Mickey & Minnie Mouse Christmas Baking Set",
+                    "https://cdn.media.amplience.net/s/hottopic/18532245_hi?$productTileDesktop$"
+                )
             );
+            // call displayStoreItems() to populate store items
+            displayStoreItems();
+            // call displayCartItems() to populate cart items
+            displayCartItems();
         }
-        // clear input boxes
-        document.getElementById("reviewId").value = "";
-        document.getElementById("reviewDesc").value = "";
-        document.getElementById("reviewNum").value = "";
-    }
-</script>
+
+        initialize();
+
+        // displayStoreItems() function, displays all the store items when page loads or user changes category
+        function displayStoreItems() {
+            // display table headings
+            document.getElementById("inventoryOutput").innerHTML =
+                "<tr><th>ID</th><th>Product Name</th><th>Price</th><th>Qty</th><th>Max</th><th>Category</th><th>Image</th><th>Details</th><th>Add To Cart</th></tr>";
+            // display properties of each item in a grid
+            for (let i = 0; i < storeItems.length; i++) {
+                var item = storeItems[i];
+                // check if item is in selected category and only display if it is
+                var selectedCategory = document.getElementById('displayFilter').value;
+                if (selectedCategory === "All" || selectedCategory === item.category) {
+                    document.getElementById("inventoryOutput").innerHTML +=
+                        "<tr><td>" +
+                        item.id +
+                        "</td><td>" +
+                        item.name +
+                        "</td><td>" +
+                        item.price +
+                        "</td><td>" +
+                        item.stockQty +
+                        "</td><td>" +
+                        item.maxPerCust +
+                        "</td><td>" +
+                        item.category +
+                        "</td><td><img width='100px' src='" +
+                        item.img +
+                        "'/></td>" +
+                        "<td><button onclick='itemDetails(" +
+                        item.id +
+                        ");'>See Details</button></td>" +
+                        "<td><button onclick='addCartItem(" +
+                        item.id +
+                        "," +
+                        item.price +
+                        "," +
+                        1 +
+                        "," +
+                        item.shippingFee +
+                        "," +
+                        item.maxPerCust +
+                        ");'>+1</button></td></tr>";
+                }
+            }
+        }
+
+        // displayCartItems() function, displays current cart items when page loads or item is added to cart
+        function displayCartItems() {
+            // if no items, output "No items in cart"
+            if (cartItems.length < 1) {
+                document.getElementById("cartOutput").innerHTML =
+                    "No items in cart... time to start shopping!";
+            } else {
+                // create table heading
+                document.getElementById("cartOutput").innerHTML =
+                    "<tr><th>ID</th><th>Price</th><th>Qty</th><th>Subtotal</th><th>Remove Item</th></tr>";
+                // display properties of each item in a grid
+                for (let i = 0; i < cartItems.length; i++) {
+                    var item = cartItems[i];
+                    document.getElementById("cartOutput").innerHTML +=
+                        "<tr><td>" +
+                        item.id +
+                        "</td><td>" +
+                        item.price +
+                        "</td><td>" +
+                        item.qty +
+                        "</td><td>" +
+                        (item.price * item.qty).toFixed(2) +
+                        "</td><td><button onclick='removeCartItem(" +
+                        item.id +
+                        ");'>-1</button></tr>";
+                }
+            }
+        }
+
+        // cartTotals() function, calculates and displays the total for the order in the cart
+        function cartTotals() {
+            // define variables for calculation
+            var itemsTotal = 0;
+            var shippingTotal = 0;
+
+            // cycle through cart and add prices to total
+            for (let i = 0; i < cartItems.length; i++) {
+                itemsTotal += cartItems[i].price * cartItems[i].qty;
+                shippingTotal += cartItems[i].shippingFee * cartItems[i].qty;
+            }
+
+            // calculate totals
+            var subtotal = itemsTotal + shippingTotal;
+            var tax = subtotal * 0.13;
+            var orderTotal = subtotal + tax;
+
+            // output pricing
+            document.getElementById("cartCheckout").innerHTML =
+                "Items Subtotal: $" +
+                itemsTotal.toFixed(2) +
+                "<br>Estimated Shipping: $" +
+                shippingTotal.toFixed(2) +
+                "<br><br>Subtotal: $" +
+                subtotal.toFixed(2) +
+                "<br>Estimated Tax (13%): $" +
+                tax.toFixed(2) +
+                "<br>Order Total: $" +
+                orderTotal.toFixed(2);
+        }
+
+        // covertPrice() function, converts the page's currency to either CAD or USD
+        function convertPrice() {
+            // get new currency value
+            var newCurr = document.getElementById("currencySelector").value;
+            // set the exchangeRate to use for currency conversion
+            var exchangeRate = 0.741;
+            // cycle through all store items and change the price
+            if (newCurr === "USD") {
+                for (let i = 0; i < storeItems.length; i++) {
+                    // store price in CAD if they decide to switch back
+                    storeItems[i].priceCAD = storeItems[i].price;
+                    storeItems[i].shippingFeeCAD = storeItems[i].shippingFee;
+                    // exchange price to USD and set to product pricing
+                    var priceExchanged = storeItems[i].price * exchangeRate;
+                    var shippingExchanged = storeItems[i].shippingFee * exchangeRate;
+                    storeItems[i].price = priceExchanged.toFixed(2);
+                    storeItems[i].shippingFee = shippingExchanged.toFixed(2);
+                }
+            } else {
+                for (let i = 0; i < storeItems.length; i++) {
+                    // use previously stored CAD price to switch back to CAD
+                    storeItems[i].price = storeItems[i].priceCAD;
+                    storeItems[i].shippingFee = storeItems[i].shippingFeeCAD;
+                }
+            }
+
+            // refresh all prices
+            displayStoreItems();
+            displayCartItems();
+            cartTotals();
+        }
+
+        // addCartItem(id,price,qty,shippingFee); function, creates a new cart object and adds it to the cart
+        function addCartItem(id, price, qty, shippingFee, maxPerCust) {
+            // create new cart object
+            newItem = new cartItem(id, price, qty, shippingFee);
+            // declare new boolean to determine if already in cart
+            var inCart = false;
+            // cycle through cart items
+            for (let i = 0; i < cartItems.length; i++) {
+                // if item is in cart change inCart to true
+                if (cartItems[i].id === newItem.id) {
+                    inCart = true;
+                    // check if item is in stock and customer hasn't reached max amt.
+                    if (
+                        cartItems[i].qty < maxPerCust &&
+                        storeItems[id - 1].stockQty > 0
+                    ) {
+                        storeItems[id - 1].stockQty--;
+                        cartItems[i].qty++;
+                    } else {
+                        alert(
+                            "This item is either out of stock or you have reached the maximum qty. Please choose another item."
+                        );
+                    }
+                }
+            }
+            // if item isn't in cart already add it in
+            if (!inCart) {
+                cartItems.push(newItem);
+                storeItems[id - 1].stockQty--;
+            }
+            // refresh cart output to display new item and totals
+            displayStoreItems();
+            displayCartItems();
+            cartTotals();
+        }
+
+        // removeCartItem(id), removes item from cart
+        function removeCartItem(id) {
+            // cycle through cart items to find correct item using id
+            for (let i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].id === id) {
+                    // remove from item's cart qty
+                    cartItems[i].qty--;
+                    if (cartItems[i].qty < 1) {
+                        // remove item from cart if qty is 0
+                        cartItems.splice(i, 1);
+                    }
+                }
+            }
+            // cycle through store items to find correct item using id
+            for (let i = 0; i < storeItems.length; i++) {
+                if (storeItems[i].id === id) {
+                    // add back to item's stock qty
+                    storeItems[i].stockQty++;
+                }
+            }
+            // refresh item displays and totals
+            displayStoreItems();
+            displayCartItems();
+            cartTotals();
+        }
+
+        // itemDetails(id), displays item details when button is clicked
+        function itemDetails(id) {
+            // cycle through storeItems to select correct item to display
+            for (let i = 0; i < storeItems.length; i++) {
+                if (id === storeItems[i].id) {
+                    // create alertMessage variable to allow for reviews to be added on
+                    var item = storeItems[i];
+                    var alertMessage =
+                        "Item Details\n---------------\nId: " +
+                        item.id +
+                        "\nName: " +
+                        item.name +
+                        "\nDescription: " +
+                        item.description +
+                        "\nPrice: $" +
+                        item.price +
+                        "\nQuantity On Hand: " +
+                        item.stockQty +
+                        "\nMax Per Customer: " +
+                        item.maxPerCust +
+                        "\nCategory: " +
+                        item.category +
+                        "\nShipping Cost: $" +
+                        item.shippingFee +
+                        "\n\nReviews:\n";
+                    // create total rating num var to use for average review
+                    var totalRatings = 0;
+                    // add reviews to alert message
+                    for (let i = 0; i < item.reviews.length; i++) {
+                        alertMessage +=
+                            "\nReview " +
+                            (i + 1) +
+                            ": " +
+                            item.reviews[i].review +
+                            "\nRating: " +
+                            item.reviews[i].rating +
+                            "\n\n";
+                        totalRatings += parseInt(item.reviews[i].rating);
+                    }
+                    // add average rating to alert message if reviews exist
+                    if (item.reviews.length > 0) {
+                        console.log(totalRatings);
+                        var averageRating = totalRatings / item.reviews.length;
+                        alertMessage += "Average Rating: " + averageRating;
+                    }
+                    // display details
+                    alert(alertMessage);
+                }
+            }
+        }
+
+        // addReview(), pushes a review into the review array of the specified product
+        function addReview() {
+            // get input values and store into variables
+            var itemId = document.getElementById("reviewId").value;
+            var review = document.getElementById("reviewDesc").value;
+            var rating = document.getElementById("reviewNum").value;
+            var newReview = new reviewItem(review, rating);
+            // create variable for id validation
+            var itemExists = false;
+            // cycle through store items to find correct item
+            for (let i = 0; i < storeItems.length; i++) {
+                if (itemId == storeItems[i].id) {
+                    // add review to reviews array
+                    storeItems[i].reviews.push(newReview);
+                    // verify that id exists
+                    itemExists = true;
+                }
+            }
+            // validate correct entry into product ID
+            if (itemExists === false) {
+                alert(
+                    "Invalid id entry, please see id column in product display to select correct item"
+                );
+            }
+            // clear input boxes
+            document.getElementById("reviewId").value = "";
+            document.getElementById("reviewDesc").value = "";
+            document.getElementById("reviewNum").value = "";
+        }
+    </script>
 </body>
+
 </html>
