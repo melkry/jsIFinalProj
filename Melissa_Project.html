@@ -8,21 +8,26 @@
 <head>
     <title>Project</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Online Merch Store</h1>
+    <h1>Warm Subject</h1>
+    <div id="dateCurr">
     <span id="dateArea" style="float: right;">Date/Time</span>
     <br />
     <span style="float: right;">
         Currency:
-        <img class="currencyFlag" width="20px"
-            src="data:image/png;base64,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" />
+        <img id="currencyFlag" width="20px"
+            src="https://www.worldatlas.com/r/w768/img/flag/ca-flag.jpg" />
         <select id="currencySelector" onchange="convertPrice();">
             <option selected value="CAD">CAD</option>
             <option value="USD">USD</option>
         </select>
     </span>
+    </div>
     <br />
     <fieldset>
         <legend>Store Items</legend>
@@ -113,7 +118,7 @@
                 new storeItem(
                     1,
                     "Expecto Patronum Spell Sweatshirt",
-                    39.9,
+                    39.8,
                     3,
                     5,
                     "Harry Potter",
@@ -315,8 +320,8 @@
                         item.id +
                         "</td><td>" +
                         item.name +
-                        "</td><td>" +
-                        item.price +
+                        "</td><td>" + "$"+
+                        item.price.toFixed(2) +
                         "</td><td>" +
                         item.stockQty +
                         "</td><td>" +
@@ -360,11 +365,11 @@
                     document.getElementById("cartOutput").innerHTML +=
                         "<tr><td>" +
                         item.id +
-                        "</td><td>" +
-                        item.price +
+                        "</td><td>" + "$"+
+                        item.price.toFixed(2) +
                         "</td><td>" +
                         item.qty +
-                        "</td><td>" +
+                        "</td><td>" + "$" +
                         (item.price * item.qty).toFixed(2) +
                         "</td><td><button onclick='removeCartItem(" +
                         item.id +
@@ -412,6 +417,8 @@
             var exchangeRate = 0.741;
             // cycle through all store items and change the price
             if (newCurr === "USD") {
+                // change img src to american flag
+                document.getElementById('currencyFlag').src = "https://www.worldatlas.com/img/flag/us-flag.jpg";
                 for (let i = 0; i < storeItems.length; i++) {
                     // store price in CAD if they decide to switch back
                     storeItems[i].priceCAD = storeItems[i].price;
@@ -423,6 +430,7 @@
                     storeItems[i].shippingFee = shippingExchanged.toFixed(2);
                 }
             } else {
+                document.getElementById('currencyFlag').src = "https://www.worldatlas.com/r/w768/img/flag/ca-flag.jpg";
                 for (let i = 0; i < storeItems.length; i++) {
                     // use previously stored CAD price to switch back to CAD
                     storeItems[i].price = storeItems[i].priceCAD;
