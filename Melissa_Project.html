@@ -406,7 +406,7 @@
                 "<br>Estimated Tax (13%): $" +
                 tax.toFixed(2) +
                 "<br>Order Total: $" +
-                orderTotal.toFixed(2);
+                orderTotal.toFixed(2) + " " + document.getElementById('currencySelector').value;
         }
 
         // covertPrice() function, converts the page's currency to either CAD or USD
@@ -416,28 +416,37 @@
             // set the exchangeRate to use for currency conversion
             var exchangeRate = 0.741;
             // cycle through all store items and change the price
-            if (newCurr === "USD") {
-                // change img src to american flag
-                document.getElementById('currencyFlag').src = "https://www.worldatlas.com/img/flag/us-flag.jpg";
-                for (let i = 0; i < storeItems.length; i++) {
+            for (let i = 0; i < storeItems.length; i++) {
+                if (newCurr === "USD") {
                     // store price in CAD if they decide to switch back
                     storeItems[i].priceCAD = storeItems[i].price;
                     storeItems[i].shippingFeeCAD = storeItems[i].shippingFee;
                     // exchange price to USD and set to product pricing
                     var priceExchanged = storeItems[i].price * exchangeRate;
                     var shippingExchanged = storeItems[i].shippingFee * exchangeRate;
-                    storeItems[i].price = priceExchanged.toFixed(2);
-                    storeItems[i].shippingFee = shippingExchanged.toFixed(2);
-                }
-            } else {
-                document.getElementById('currencyFlag').src = "https://www.worldatlas.com/r/w768/img/flag/ca-flag.jpg";
-                for (let i = 0; i < storeItems.length; i++) {
+                    storeItems[i].price = priceExchanged;
+                    storeItems[i].shippingFee = shippingExchanged;
+                    //check if item is in cart and update pricing if it is
+                    for (let j = 0; j < cartItems.length; j++) {
+                        if (storeItems[i].id === cartItems[j].id) {
+                            cartItems[j].price = priceExchanged;
+                            cartItems[j].shippingFee = shippingExchanged;
+                        }
+                    }
+                } else {
+                    document.getElementById('currencyFlag').src = "https://www.worldatlas.com/r/w768/img/flag/ca-flag.jpg";
                     // use previously stored CAD price to switch back to CAD
                     storeItems[i].price = storeItems[i].priceCAD;
                     storeItems[i].shippingFee = storeItems[i].shippingFeeCAD;
+                    //check if item is in cart and update pricing if it is
+                    for (let j = 0; j < cartItems.length; j++) {
+                        if (storeItems[i].id === cartItems[j].id) {
+                            cartItems[j].price = storeItems[i].priceCAD;
+                            cartItems[j].shippingFee = storeItems[i].shippingFeeCAD;
+                        }
+                    }
                 }
             }
-
             // refresh all prices
             displayStoreItems();
             displayCartItems();
