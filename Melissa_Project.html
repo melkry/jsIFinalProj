@@ -431,10 +431,13 @@
         // get new currency value
         var newCurr = document.getElementById("currencySelector").value;
         // set the exchangeRate to use for currency conversion
-        var exchangeRate = 0.741;
+        var exchangeRate = 0.7485;
         // cycle through all store items and change the price
         for (let i = 0; i < storeItems.length; i++) {
           if (newCurr === "USD") {
+            //change flag to reflect currency
+            document.getElementById("currencyFlag").src =
+              "https://www.worldatlas.com/img/flag/us-flag.jpg";
             // store price in CAD if they decide to switch back
             storeItems[i].priceCAD = storeItems[i].price;
             storeItems[i].shippingFeeCAD = storeItems[i].shippingFee;
@@ -451,6 +454,7 @@
               }
             }
           } else {
+            //change flag to reflect currency
             document.getElementById("currencyFlag").src =
               "https://www.worldatlas.com/r/w768/img/flag/ca-flag.jpg";
             // use previously stored CAD price to switch back to CAD
