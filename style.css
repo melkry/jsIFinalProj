@@ -1,5 +1,50 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    align-items: center;
+}
+
 th,
 tr,
 td {
+    text-align: center;
     border: 1px solid black;
+    background-color: white;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Patrick Hand',
+        cursive;
+    text-align: center;
+    width: 100%;
+    background-color: #f17a7e;
+    position: fixed;
+}
+
+#dateCurr{
+    margin: 4rem;
+    align-self: end;
+}
+
+button {
+    background-color: lightpink;
+}
+
+button:hover {
+    background-color: lightcoral
+}
+
+legend {
+    text-align: center;
+}
+
+fieldset {
+    width: 80%;
+}
+
+table {
+    width: 100%;
 }
