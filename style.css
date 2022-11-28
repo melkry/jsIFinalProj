@@ -1,50 +1,50 @@
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: lightgrey;
-    align-items: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(15, 100%, 91%);
+  align-items: center;
+  font-family: "Patrick Hand", cursive;
 }
 
 th,
 tr,
 td {
-    text-align: center;
-    border: 1px solid black;
-    background-color: white;
+  text-align: center;
+  border: 1px solid black;
+  background-color: white;
 }
 
 h1 {
-    margin: 0;
-    font-family: 'Patrick Hand',
-        cursive;
-    text-align: center;
-    width: 100%;
-    background-color: #f17a7e;
-    position: fixed;
+  margin: 0;
+  font-family: "Patrick Hand", cursive;
+  text-align: center;
+  width: 100%;
+  background-color: #f17a7e;
+  position: fixed;
 }
 
-#dateCurr{
-    margin: 4rem;
-    align-self: end;
+#dateCurr {
+  margin: 4rem;
+  align-self: end;
 }
 
 button {
-    background-color: lightpink;
+  background-color: lightpink;
 }
 
 button:hover {
-    background-color: lightcoral
+  background-color: lightcoral;
 }
 
 legend {
-    text-align: center;
+  text-align: center;
 }
 
 fieldset {
-    width: 80%;
+  width: 80%;
 }
 
 table {
-    width: 100%;
+  width: 100%;
 }
